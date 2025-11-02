@@ -40,6 +40,24 @@
         }
       }
     },
+    "/user/list": {
+      "get": {
+        "summary": "Listar usuários cadastrados",
+        "responses": {
+          "200": {
+            "description": "Lista de usuários",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/UserListItem" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/product": {
       "post": {
         "summary": "Criar produto",
@@ -221,6 +239,13 @@
           "id": { "type": "integer" },
           "items": { "type": "array", "items": { "$ref": "#/components/schemas/Product" } },
           "createdAt": { "type": "string", "format": "date-time" }
+        }
+      }
+      ,
+      "UserListItem": {
+        "type": "object",
+        "properties": {
+          "username": { "type": "string" }
         }
       }
     }

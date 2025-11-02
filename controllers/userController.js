@@ -20,3 +20,8 @@ exports.register = (req, res) => {
   users.push({ username, password });
   res.status(201).json({ message: 'Usuário registrado com sucesso' });
 };
+
+exports.listUsers = (req, res) => {
+  const userList = users.map(u => ({ username: u.username }));
+  res.json(userList);
+};
