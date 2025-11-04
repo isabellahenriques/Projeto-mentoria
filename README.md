@@ -33,6 +33,8 @@ Esta API foi criada para ajudar na organização de listas de compras de superme
    node index.js
    ```
 3. Acesse a documentação Swagger em [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+   <img width="1920" height="7585" alt="Swagger-UI" src="https://github.com/user-attachments/assets/9df1931b-f4f5-404f-a4b1-3a309441d9fa" />
+
 
 ## Estrutura do Projeto
 - `routes/` - Rotas da API
