@@ -1,10 +1,10 @@
 {
   "name": "projeto-mentoria",
   "version": "1.0.0",
-  "description": "",
+  "description": "Esta API foi criada para ajudar na organização de listas de compras de supermercado, especialmente para quem precisa de praticidade e controle. A autenticação é feita via JWT e todas as operações de CRUD exigem login.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha 'test/**/*.test.js' --timeout 10000 --reporter mochawesome"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,17 @@
   },
   "homepage": "https://github.com/isabellahenriques/Projeto-mentoria#readme",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "multer": "^2.0.2",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "chai": "^6.2.0",
+    "mocha": "^11.7.4",
+    "mochawesome": "^7.1.4",
+    "supertest": "^7.1.4"
   }
 }
